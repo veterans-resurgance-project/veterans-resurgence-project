@@ -4,109 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Watership Stewards Empowering | Veterans Resurgence Project</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    :root {
-      --bg-primary: #0f172a;
-      --bg-card: #1e293b;
-      --accent-green: #22c55e;
-      --accent-blue: #0ea5e9;
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --border-color: #334155;
-    }
-
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg-primary);
-      color: var(--text-main);
-      line-height: 1.6;
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: #0f172a;
+      color: #f8fafc;
     }
-
-    /* Navigation Bar */
-    nav {
-      background: #144d29;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    .logo {
-      font-weight: 800;
-      font-size: 1.5rem;
-      color: white;
-      letter-spacing: -0.5px;
-    }
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-      margin: 0;
-      padding: 0;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover {
-      color: #a3e635;
-    }
-    .nav-cta {
-      background: #27ae60 !important;
-      padding: 0.6rem 1.25rem;
-      border-radius: 5px;
-    }
-
-    /* Hero Header Section */
     .hero-header {
       position: relative;
       text-align: center;
-      padding: 7rem 1.5rem 5rem 1.5rem;
-      background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.9)), url('Screenshot_20260421-000340.png');
+      padding: 7rem 1rem 5rem 1rem;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('Screenshot_20260421-000340.png');
       background-size: cover;
       background-position: center;
       color: white;
-      border-bottom: 1px solid var(--border-color);
     }
     .hero-content {
       max-width: 900px;
       margin: 0 auto;
     }
     .hero-header h1 {
-      font-size: 3.5rem;
+      font-size: 4rem;
       font-weight: 800;
       margin: 0 0 0.5rem 0;
       letter-spacing: -0.02em;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.6);
     }
     .hero-header h2 {
-      font-size: 1.75rem;
+      font-size: 2rem;
       font-weight: 700;
       margin: 0 0 1.5rem 0;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: #cbd5e1;
+      color: #e2e8f0;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.6);
     }
     .hero-header p {
       font-size: 1.15rem;
-      line-height: 1.7;
-      max-width: 750px;
+      line-height: 1.6;
+      max-width: 700px;
       margin: 0 auto;
-      color: #e2e8f0;
+      color: #f1f1f1;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.6);
     }
-
-    /* Sub Navigation Bar */
     .sub-nav-bar {
       background: #1e293b;
-      border-bottom: 1px solid var(--border-color);
+      border-bottom: 1px solid #334155;
       padding: 1rem;
       text-align: center;
     }
@@ -127,8 +72,6 @@
     .sub-nav-links a:hover {
       text-decoration: underline;
     }
-
-    /* Cards Grid Section */
     .cards-section {
       max-width: 1200px;
       margin: 4rem auto;
@@ -140,23 +83,19 @@
       gap: 2rem;
     }
     .card {
-      background: var(--bg-card);
+      background: #1e293b;
       border-radius: 12px;
-      border: 1px solid var(--border-color);
+      border: 1px solid #334155;
       overflow: hidden;
       display: flex;
       flex-direction: column;
       box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-      transition: transform 0.2s;
-    }
-    .card:hover {
-      transform: translateY(-4px);
     }
     .card img {
       width: 100%;
       height: 180px;
       object-fit: cover;
-      border-bottom: 1px solid var(--border-color);
+      border-bottom: 1px solid #334155;
     }
     .card-body {
       padding: 1.5rem;
@@ -171,75 +110,34 @@
       font-size: 1.25rem;
     }
     .card-body p {
-      color: var(--text-muted);
+      color: #94a3b8;
       font-size: 0.95rem;
       line-height: 1.6;
       margin: 0;
     }
-
-    /* Main Info / Legacy Section */
     .main-info-section {
       max-width: 900px;
       margin: 4rem auto;
       padding: 2.5rem;
-      background: var(--bg-card);
+      background: #1e293b;
       border-radius: 16px;
-      border: 1px solid var(--border-color);
+      border: 1px solid #334155;
       box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-    }
-    .main-info-section h2 {
-      font-size: 2rem;
-      margin-top: 0;
-      color: white;
-    }
-    .main-info-section p {
-      color: #cbd5e1;
-      font-size: 1.05rem;
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
-    }
-    .grid-features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-    .feature-box {
-      background: rgba(15, 23, 42, 0.7);
-      padding: 1.5rem;
-      border-radius: 10px;
-      border: 1px solid rgba(255,255,255,0.05);
-    }
-    .feature-box h3 {
-      font-size: 1.1rem;
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-    }
-
-    /* Footer */
-    footer {
-      background: #144d29;
-      padding: 2.5rem 2rem;
-      text-align: center;
-      color: #cbd5e1;
-      font-size: 0.95rem;
-      margin-top: 5rem;
-      border-top: 1px solid rgba(255,255,255,0.1);
     }
   </style>
 </head>
 <body>
 
   <!-- Navigation Bar -->
-  <nav>
-    <div class="logo">VRP</div>
-    <ul class="nav-links">
-      <li><a href="index.html" style="color: #a3e635;">Home</a></li>
-      <li><a href="framework.html">Framework</a></li>
-      <li><a href="agreements.html">Agreements &amp; Docs</a></li>
-      <li><a href="training-details.html">Training &amp; Ledger</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="support.html" class="nav-cta">How You Can Help</a></li>
+  <nav style="background: #144d29; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2); position: sticky; top: 0; z-index: 1000;">
+    <div class="logo" style="font-weight: 800; font-size: 1.5rem; color: white; letter-spacing: -0.5px;">VRP</div>
+    <ul class="nav-links" style="list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0; align-items: center; flex-wrap: wrap;">
+      <li><a href="index.html" style="color: #a3e635; text-decoration: none; font-weight: 600; font-size: 0.95rem;">Home</a></li>
+      <li><a href="framework.html" style="color: white; text-decoration: none; font-weight: 600; font-size: 0.95rem;">Framework</a></li>
+      <li><a href="agreements.html" style="color: white; text-decoration: none; font-weight: 600; font-size: 0.95rem;">Agreements &amp; Docs</a></li>
+      <li><a href="training-details.html" style="color: white; text-decoration: none; font-weight: 600; font-size: 0.95rem;">Training &amp; Ledger</a></li>
+      <li><a href="gallery.html" style="color: white; text-decoration: none; font-weight: 600; font-size: 0.95rem;">Gallery</a></li>
+      <li><a href="support.html" style="background: #27ae60; color: white; padding: 0.6rem 1.25rem; border-radius: 5px; text-decoration: none; font-weight: 700; font-size: 0.95rem;">How You Can Help</a></li>
     </ul>
   </nav>
 
@@ -252,7 +150,7 @@
     </div>
   </header>
 
-  <!-- Sub Navigation Button Bar -->
+  <!-- Button Bar for Links to Other Files -->
   <div class="sub-nav-bar">
     <div class="sub-nav-links">
       <a href="framework.html">Operational Framework</a>
@@ -264,7 +162,7 @@
     </div>
   </div>
 
-  <!-- Feature Cards Section -->
+  <!-- Four Feature Cards Section -->
   <section class="cards-section">
     <div class="cards-container">
       
@@ -303,31 +201,33 @@
     </div>
   </section>
 
-  <!-- Main Information & Mission Section -->
+  <!-- Main Information Section (Clean, Box-Free Narrative) -->
   <main class="main-info-section">
-    <h2>A Legacy of Service, Stability, and Land Stewardship</h2>
-    <p>
-      Operating out of our centralized headquarters in Linn County, Oregon, under <strong>watershipstewardsempowering.org</strong>, our mission bridges the gap between veteran vocational rehabilitation and critical regional land stewardship. Through strict morning musters, asset-light operational frameworks, and robust partnerships, we turn wilderness defense into stable civilian careers that build lasting community assets.
-    </p>
-    <p>
-      This represents a complete transition from initial mission to permanent stewardship—ensuring healthier regional ecosystems, sustainable agricultural optimization, and a thriving, self-reliant future that our children and grandchildren can look back on with pride.
+    <h2 style="color: #ffffff; font-size: 1.8rem; margin-top: 0;">A Legacy of Service, Stability, and Land Stewardship</h2>
+    
+    <p style="color: #cbd5e1; font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;">
+      Operating out of our centralized headquarters in Linn County, Oregon, under <strong>watershipstewardsempowering.org</strong>, our mission bridges the gap between veteran vocational rehabilitation and critical regional land stewardship. Through strict morning musters, asset-light operational frameworks, and robust partnerships, we turn wilderness defense into stable civilian pathways.
     </p>
 
-    <div class="grid-features">
-      <div class="feature-box">
-        <h3 style="color: #fbd38d;">0800 Safety Musters</h3>
-        <p style="margin: 0; font-size: 0.95rem; color: var(--text-muted);">Structured military-style accountability, real-time hazard briefs, and rigorous daily standard operating procedures.</p>
+    <p style="color: #cbd5e1; font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;">
+      Through our fully integrated programs—uniting veteran-led field teams with agricultural diagnostics and open community training—we do more than execute daily field missions. We are establishing stable, respected land stewardship careers that allow our participants to anchor themselves as key community assets and stable landowners. This is a complete transition from initial mission to permanent stewardship, actively building a lasting legacy of healthier ecosystems and a thriving, self-reliant future that our children and grandchildren can look back on with pride.
+    </p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+      <div style="background: rgba(15, 23, 42, 0.6); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+        <h3 style="color: #fbd38d; font-size: 1.1rem; margin-top: 0;">0800 Safety Musters</h3>
+        <p style="color: #94a3b8; font-size: 0.95rem; margin: 0; line-height: 1.5;">Structured military-style accountability, real-time hazard briefs, and rigorous daily standard operating procedures.</p>
       </div>
-      <div class="feature-box">
-        <h3 style="color: #63b3ed;">Asset-Light Mandate</h3>
-        <p style="margin: 0; font-size: 0.95rem; color: var(--text-muted);">Zero early equipment debt; heavy field operations integrated seamlessly via direct timber industry subcontracts.</p>
+      <div style="background: rgba(15, 23, 42, 0.6); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+        <h3 style="color: #63b3ed; font-size: 1.1rem; margin-top: 0;">Asset-Light Mandate</h3>
+        <p style="color: #94a3b8; font-size: 0.95rem; margin: 0; line-height: 1.5;">Zero early equipment debt; heavy operations integrated seamlessly via direct timber industry subcontracts.</p>
       </div>
     </div>
   </main>
 
   <!-- Footer -->
-  <footer>
-    <p style="margin: 0;">&copy; 2026 The Veterans Resurgence Project &amp; Watership Stewards Empowering (watershipstewardsempowering.org). All rights reserved.</p>
+  <footer style="background: #144d29; padding: 2.5rem 2rem; text-align: center; color: #cbd5e1; font-size: 0.95rem; margin-top: 5rem; border-top: 1px solid rgba(255,255,255,0.1);">
+    <p style="margin: 0;">&copy; 2026 The Veterans Resurgence Project &amp; Watership Stewards Empowering. All rights reserved.</p>
   </footer>
 
 </body>
